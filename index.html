@@ -3,78 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Image Generator by Shahroz</title>
-    <!-- Font Awesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-    <!-- Custom CSS Link -->
-    <link rel="stylesheet" href="style.css" />
+    <title>AI Image Generator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <div class="container">
-        <header class="header">
-          <div class="logo-wrapper">
-            <div class="logo">
-              <i class="fa-solid fa-wand-magic-sparkles"></i>
-            </div>
-            <h1>AI Image Generator</h1>
-          </div>
-          <button class="theme-toggle">
-            <i class="fa-solid fa-moon"></i>
-          </button>
-        </header>
-        <div class="main-content">
-          <form action="#" class="prompt-form">
-            <div class="prompt-container">
-              <textarea class="prompt-input" placeholder="Describe your imagination in detail..." spellcheck="false" autofocus required></textarea>
-              <button type="button" class="prompt-btn" title="Get Random Prompt">
-                <i class="fa-solid fa-dice"></i>
-              </button>
-            </div>
-            <div class="prompt-actions">
-              <div class="select-wrapper">
-                <select class="custom-select" id="model-select" required>
-                  <option value="" selected disabled>Select Model</option>
-                  <option value="black-forest-labs/FLUX.1-dev">FLUX.1-dev</option>
-                  <option value="black-forest-labs/FLUX.1-schnell">FLUX.1-schnell</option>
-                  <option value="stabilityai/stable-diffusion-xl-base-1.0">Stable Diffusion XL</option>
-                  <option value="runwayml/stable-diffusion-v1-5">Stable Diffusion v1.5</option>
-                  <option value="stabilityai/stable-diffusion-3-medium-diffusers">Stable Diffusion 3</option>
-                </select>
-              </div>
-              <div class="select-wrapper">
-                <select class="custom-select" id="count-select" required>
-                  <option value="" selected disabled>Image Count</option>
-                  <option value="1">1 Image</option>
-                  <option value="2">2 Images</option>
-                  <option value="3">3 Images</option>
-                  <option value="4">4 Images</option>
-                </select>
-              </div>
-              <div class="select-wrapper">
-                <select class="custom-select" id="ratio-select" required>
-                  <option value="" selected disabled>Aspect Ratio</option>
-                  <option value="1/1">Square (1:1)</option>
-                  <option value="16/9">Landscape (16:9)</option>
-                  <option value="9/16">Portrait (9:16)</option>
-                </select>
-              </div>
-              <button type="submit" class="generate-btn">
-                <i class="fa-solid fa-wand-sparkles"></i>
-                Generate
-              </button>
-            </div>
-          <input
-                    class="apbct_special_field apbct_email_id__elementor_form"
-                    name="apbct__email_id__elementor_form"
-                    aria-label="apbct__label_id__elementor_form"
-                    type="text" size="30" maxlength="200" autocomplete="off"
-                    value=""
-                /></form>
-          <div class="gallery-grid"></div>
-        </div>
-      </div>
+<body class="bg-gray-800 flex items-center justify-center flex-col">
 
-      <!-- JavaScript Link -->
-      <script src="main.js"></script>
+    <div  class="bg-white p-8 max-w-5xl w-full rounded-lg mt-5 flex items-center justify-center flex-col gap-5">
+        <h1 class="text-4xl text-center mb-5 font-semibold">TEXT TO IMAGE GENERATOR</h1>
+        <textarea class="border w-full" rows="4" name="textInput" id="textInput"></textarea>
+        <button id="GenerateBtn" class="px-6 py-2 bg-blue-600 mx-auto rounded-lg text-white text-xl">Generate Image</button>
+    </div>
+    <div id="imageContainer" class="imageContainer mt-10 max-w-5xl w-full flex items-center justify-center flex-col mx-auto mb-10">
+        <!-- //here we will display image  -->
+        
+        
+    </div>
+
+
+
+    <script src="./script.js"></script>
+
 </body>
 </html>
